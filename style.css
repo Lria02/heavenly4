@@ -1,0 +1,290 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.harryimg {
+    width: 100%;  /* Full viewport width */
+    height: 100%; /* Full viewport height */
+    object-fit: contain; /* Ensures the image fits within the container while preserving aspect ratio */
+    display: block; /* Removes any bottom space */
+}
+
+
+
+.picture img {
+    margin-top: 5%;
+    width: 40%;
+    height: 80%;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%; /* Make the header span the full width of the container */
+    font-size: 25px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align the content inside the header to the right */
+    box-sizing: border-box;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(122, 122, 122), rgb(0, 0, 0));
+    z-index: 1;
+}
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center; /* Vertically center items */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure it takes full width */
+}
+
+header ul li:first-child {
+    margin-right: auto; /* Push "Jason EX" to the left */
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #007bff; /* Optional hover effect */
+}
+
+header ul li {
+    z-index: 1;
+}
+
+.mars1 img {
+    display: flex;
+    max-width: 400px;
+    justify-content: flex-start;
+    margin-right: 200px; /* Add margin to the right side (or adjust as needed) */
+    margin-top: 50px; /* Add margin to the top side for spacing (optional) */
+}
+.Introduction {
+    display: block; /* Remove flex behavior for text alignment */
+    margin-top: 10%;
+    max-width: 700px;
+    border: 2px solid rgb(255, 255, 255); /* White border */
+    padding: 20px; /* Remove padding to allow text to start from the border */
+    max-height: 350px;
+    overflow-y: auto;
+    /* Optional: if you want the text to align to the left or top */
+    text-align: left; /* Align text to the left (default) */
+    line-height: 2; /* For better readability */
+}
+
+
+
+.container-content {
+    
+   
+    display: flex;
+    gap: 20px; /* Add spacing between the two elements */
+    justify-content: flex-end; /* Ensure items are aligned to the left */
+    margin-right: 5%;
+}
+
+.Introduction h1 {
+    margin-top: 0; /* Remove top margin from h1 to ensure it starts from the top border */
+    margin-bottom: 20px; /* Optional: add space between h1 and the content below */
+    font-size: 24px; /* Adjust the size as needed */
+    color: rgb(255, 255, 255); /* White color for the title */
+    text-align: center; /* Center the title if desired */
+}
+
+
+
+.missionBG {
+    background-image: url(backbg.png);
+    background-size: contain;
+}
+
+.container-vision {
+    display: flex;
+    
+    gap: 100px; /* Add spacing between the two elements */
+    justify-content: center; /* Ensure items are aligned to the left */
+    
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.65);
+    display: block; /* Remove flex behavior for text alignment */
+    margin-top: 10%;
+    max-width: 700px;
+    min-width: 600px;
+    border: 2px solid rgb(255, 255, 255); /* White border */
+    padding: 20px;
+    max-height: 350px;
+    overflow-y: auto;
+    text-align: center; /* Align text to the left inside */
+    line-height: 2; /* For better readability */
+}
+
+.container h1 {
+    margin-top: 0; /* Remove top margin from h1 to ensure it starts from the top border */
+    margin-bottom: 20px; /* Optional: add space between h1 and the content below */
+    font-size: 24px; /* Adjust the size as needed */
+    color: rgb(255, 255, 255); /* White color for the title */
+    text-align: center; /* Center the title inside its container */
+}
+
+
+.bgground img {
+    width: 100%;
+    height: 100%;
+}
+/* Center the gallery in the viewport */
+#Gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: relative; /* Ensure it stays in place */
+}
+
+/* Styling for the Gallery title or text */
+.GalleryniMars {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    z-index: 1;
+    pointer-events: none; /* Disable interaction */
+}
+
+/* Center the image container inside #Gallery */
+.imgcontainer {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 1em;
+    width: 90%; /* Adjust the width as needed */
+    max-width: 900px; /* Maximum width */
+    height: 500px; /* Fixed height */
+    transition: all 400ms;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Make sure hover effect is on top */
+}
+
+/* Make images gray by default */
+/* Default box styling */
+.box {
+    position: relative;
+    background: var(--img) center center;
+    background-size: cover; /* Ensure image covers the box */
+    transition: all 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%) opacity(50%); /* Gray and partially transparent */
+    overflow: hidden; /* Hide any overflow */
+    width: 100%; /* Make the box take full available width */
+    height: 100%; /* Make the box take full available height */
+    cursor: pointer; /* Indicate the image is interactive */
+}
+
+/* Show the original color when hovering */
+.box:hover {
+    filter: grayscale(0%) opacity(100%); /* Normal image and full opacity on hover */
+}
+
+/* Hover effect for grid layout (pop-up effect) */
+.imgcontainer .box:hover {
+    transform: scale(3.6); /* Slightly enlarge the image when hovering */
+    z-index: 10; /* Ensure the hovered box is above others */
+    background-size: contain; /* Ensure the full image is shown without cropping */
+    background-repeat: no-repeat;
+    background-position: center; /* Ensure the image stays centered */
+}
+.imgcontainer .box:hover ~ .box {
+    transform: translateX(200px); /* Push the other images to the right */
+}
+
+
+
+
+
+
+
+.Membership {
+    margin-top: 10%;
+}
+.Membership h1 {
+    text-align: center;
+}
+
+/* Center the button inside its container */
+.button-container {
+    display: flex;
+    justify-content: center;  /* Centers the button horizontally */
+    align-items: center;      /* Centers the button vertically */
+                /* Ensure container takes full viewport height */
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #ffffff;  /* Button background color */
+    color: rgb(0, 0, 0);               /* Text color */
+    font-size: 16px;            /* Font size */
+    border: none;               /* Remove border */
+    border-radius: 5px;         /* Rounded corners */
+    cursor: pointer;           /* Cursor on hover */
+    text-align: center;         /* Ensure text is centered */
+}
+
+/* Optional: Add hover effect */
+.button:hover {
+    color: white;
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+
+.container-membership {
+    display: flex;
+    gap: 10px; /* Adds margin between the sections */
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.section {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ffffff;
+    width: 30%; /* Adjust width so all three fit in a row */
+}
+
+.content-membership {
+    font-size: 15px;
+    padding: 10px;
+    height: 300px; /* Set a fixed height */
+    overflow-y: auto; /* Enable scrolling for overflowing content */
+    color: rgb(239, 239, 239);
+    text-align: left; /* Align content text */
+}
+
+.MembershipHeader {
+    display: flex;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(122, 122, 122), rgb(0, 0, 0));
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
